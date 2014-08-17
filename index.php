@@ -4,14 +4,15 @@ require_once "Class/MH_Widget.php";
 
 $widget = new \MH_Widget\MH_widget();
 
+$hello = $widget("HelloWorld");
 
-$hello = $widget("Gravatar", ["email" => "info@matteohertel.com"]);
 
-//$hello = $widget::load("Gravatar");
+echo $hello;
 
-echo "<pre>";
-var_dump($hello);
-echo "</pre>";
+$avatar = $widget("Gravatar", ["email" => "info@matteohertel.com", "size" => 440]);
+
+echo $avatar;
+
 
 echo"<pre style='color:#59E817; background-color:black; word-wrap:break-word;'>";
 var_export(microtime() - $start);
