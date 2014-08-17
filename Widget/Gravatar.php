@@ -1,8 +1,7 @@
 <?php
 
-class Gravatar {
-    private $config;
-    
+class Gravatar extends \MH_widget\MH_widgetBase {
+
     public function __construct($config){
         $this->config = $config;
     }
@@ -11,25 +10,21 @@ class Gravatar {
         return $this->controller();
     }
     
-    private function controller(){
-        $data = $this->model();
-        if(isset($this->config['view'])){
-            return $this->config['view']($data); 
+    protected function controller(){
+        $this->data = $this->model();
+        return $this->view($this->data);
 
-        }else{
-            return $this->view($data);
-        }
     }
     
-    private function model(){
+    protected function model(){
         
         return "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $this->config['email'] ) ) );
     }
     
-    private function view($data){
+    protected function view(){
         ob_start();
         
-        echo sprintf("<img src='%s' />", $data);
+        echo sprintf("<img src='%s' />", $this->data);
         
         return ob_get_clean();
     }
