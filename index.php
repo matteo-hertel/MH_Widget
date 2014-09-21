@@ -1,5 +1,5 @@
 <?php
-$start = microtime();
+$start = microtime(true);
 $size = array_key_exists("size", $_GET) ? (int)$_GET["size"] : 80;
 
 require_once "Class/MH_Widget.php";
@@ -17,5 +17,5 @@ echo $avatar;
 
 
 echo"<pre style='color:#59E817; background-color:black; word-wrap:break-word;'>";
-var_export(microtime() - $start);
+var_export(microtime(true) - $start);
 echo"</pre>";
