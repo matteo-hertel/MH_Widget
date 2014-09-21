@@ -1,6 +1,6 @@
 <?php
 
-class Gravatar extends \MH_widget\MH_widgetBase {
+final class Gravatar extends \MH_Widget\MH_WidgetBase {
 
     public function __construct($config) {
         $this->config = $config;
