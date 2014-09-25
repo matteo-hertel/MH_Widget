@@ -15,7 +15,7 @@ class Gravatar extends \MH_widget\MH_widgetBase {
     /**
      * @brief Magic contructor 
      * 
-     * Gets a confif array as parameter and will make that array availabe in the class scope
+     * Gets a config array as parameter and will make that array availabe in the class scope
      * 
      * @param type $config
      */

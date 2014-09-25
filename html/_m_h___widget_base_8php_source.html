@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>MH_Widget: Class/MH_Widget.php File Reference</title>
+<title>MH_Widget: Class/MH_WidgetBase.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,28 +85,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">MH_Widget.php File Reference</div>  </div>
+<div class="title">MH_WidgetBase.php</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><a href="_m_h___widget_8php_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_h___widget_1_1_m_h___widget.html">MH_Widget</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespace_m_h___widget"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_m_h___widget.html">MH_Widget</a></td></tr>
-<tr class="memdesc:namespace_m_h___widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">The widget system will run under the <a class="el" href="class_m_h___widget.html" title="Main Widget class, it will load dependecies, create instances and call the oter widget. ">MH_Widget</a> namespace. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-</div><!-- contents -->
+<a href="_m_h___widget_base_8php.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;?php</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_m_h___widget.html">MH_Widget</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_m_h___widget_1_1_m_h___widget_base.html">   21</a></span>&#160;<span class="keyword">abstract</span> <span class="keyword">class </span><a class="code" href="class_m_h___widget_1_1_m_h___widget_base.html">MH_WidgetBase</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_m_h___widget_1_1_m_h___widget_base.html#a49c7011be9c979d9174c52a8b83e5d8e">   27</a></span>&#160;    <span class="keyword">protected</span> <a class="code" href="class_m_h___widget_1_1_m_h___widget_base.html#a49c7011be9c979d9174c52a8b83e5d8e">$config</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_m_h___widget_1_1_m_h___widget_base.html#a6efc15b5a2314dd4b5aaa556a375c6d6">   33</a></span>&#160;            <span class="keyword">protected</span><a class="code" href="class_m_h___widget_1_1_m_h___widget_base.html#a6efc15b5a2314dd4b5aaa556a375c6d6">$data</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">abstract</span> <span class="keyword">public</span> <span class="keyword">function</span> __invoke();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">abstract</span> <span class="keyword">protected</span> <span class="keyword">function</span> controller();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">abstract</span> <span class="keyword">protected</span> <span class="keyword">function</span> model();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">abstract</span> <span class="keyword">protected</span> <span class="keyword">function</span> view();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="ttc" id="class_m_h___widget_1_1_m_h___widget_base_html_a49c7011be9c979d9174c52a8b83e5d8e"><div class="ttname"><a href="class_m_h___widget_1_1_m_h___widget_base.html#a49c7011be9c979d9174c52a8b83e5d8e">MH_Widget\MH_WidgetBase\$config</a></div><div class="ttdeci">$config</div><div class="ttdef"><b>Definition:</b> <a href="_m_h___widget_base_8php_source.html#l00027">MH_WidgetBase.php:27</a></div></div>
+<div class="ttc" id="class_m_h___widget_1_1_m_h___widget_base_html_a6efc15b5a2314dd4b5aaa556a375c6d6"><div class="ttname"><a href="class_m_h___widget_1_1_m_h___widget_base.html#a6efc15b5a2314dd4b5aaa556a375c6d6">MH_Widget\MH_WidgetBase\$data</a></div><div class="ttdeci">$data</div><div class="ttdef"><b>Definition:</b> <a href="_m_h___widget_base_8php_source.html#l00033">MH_WidgetBase.php:33</a></div></div>
+<div class="ttc" id="class_m_h___widget_1_1_m_h___widget_base_html"><div class="ttname"><a href="class_m_h___widget_1_1_m_h___widget_base.html">MH_Widget\MH_WidgetBase</a></div><div class="ttdef"><b>Definition:</b> <a href="_m_h___widget_base_8php_source.html#l00021">MH_WidgetBase.php:21</a></div></div>
+<div class="ttc" id="namespace_m_h___widget_html"><div class="ttname"><a href="namespace_m_h___widget.html">MH_Widget</a></div><div class="ttdoc">The widget system will run under the MH_Widget namespace. </div><div class="ttdef"><b>Definition:</b> <a href="_m_h___widget_8php_source.html#l00007">MH_Widget.php:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Thu Sep 25 2014 23:39:33 for MH_Widget by &#160;<a href="http://www.doxygen.org/index.html">

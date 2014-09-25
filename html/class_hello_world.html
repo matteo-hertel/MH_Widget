@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Simple class to show how the widget system can work.  
+<p>Simple <a class="el" href="class_hello_world.html" title="Simple HelloWorld class to show how the widget system is working. ">HelloWorld</a> class to show how the widget system is working.  
  <a href="class_hello_world.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for HelloWorld:</div>
@@ -111,6 +111,7 @@ Collaboration diagram for HelloWorld:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acf2ad978657d47ceab41038dc7d95737"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hello_world.html#acf2ad978657d47ceab41038dc7d95737">__construct</a> ($config)</td></tr>
+<tr class="memdesc:acf2ad978657d47ceab41038dc7d95737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magic contructor.  <a href="#acf2ad978657d47ceab41038dc7d95737">More...</a><br /></td></tr>
 <tr class="separator:acf2ad978657d47ceab41038dc7d95737"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9aac7e1475efe923de4e19cc2511f092"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hello_world.html#a9aac7e1475efe923de4e19cc2511f092">__invoke</a> ()</td></tr>
 <tr class="separator:a9aac7e1475efe923de4e19cc2511f092"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,12 +158,13 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a6efc15b5a2314dd4b5aaa556a375c6d6 inherit pro_attribs_class_m_h___widget_1_1_m_h___widget_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Simple class to show how the widget system can work. </p>
+<div class="textblock"><p>Simple <a class="el" href="class_hello_world.html" title="Simple HelloWorld class to show how the widget system is working. ">HelloWorld</a> class to show how the widget system is working. </p>
+<p>Simple class to show how the widget system can work.</p>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2014 Matteo Hertel (<a href="#" onclick="location.href='mai'+'lto:'+'inf'+'o@'+'mat'+'te'+'ohe'+'rt'+'el.'+'co'+'m'; return false;">info@<span style="display: none;">.nosp@m.</span>matt<span style="display: none;">.nosp@m.</span>eoher<span style="display: none;">.nosp@m.</span>tel.<span style="display: none;">.nosp@m.</span>com</a>)  MIT </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section author"><dt>Author</dt><dd>Matteo Hertel <a href="#" onclick="location.href='mai'+'lto:'+'inf'+'o@'+'mat'+'te'+'ohe'+'rt'+'el.'+'co'+'m'; return false;">info@<span style="display: none;">.nosp@m.</span>matt<span style="display: none;">.nosp@m.</span>eoher<span style="display: none;">.nosp@m.</span>tel.<span style="display: none;">.nosp@m.</span>com</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="_hello_world_8php_source.html#l00003">3</a> of file <a class="el" href="_hello_world_8php_source.html">HelloWorld.php</a>.</p>
+<p>Definition at line <a class="el" href="_hello_world_8php_source.html#l00012">12</a> of file <a class="el" href="_hello_world_8php_source.html">HelloWorld.php</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="acf2ad978657d47ceab41038dc7d95737"></a>
 <div class="memitem">
@@ -178,7 +180,16 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_hello_world_8php_source.html#l00005">5</a> of file <a class="el" href="_hello_world_8php_source.html">HelloWorld.php</a>.</p>
+<p>Magic contructor. </p>
+<p>Gets a config array as parameter and will make that array availabe in the class scope</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">type</td><td class="paramname">$config</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_hello_world_8php_source.html#l00021">21</a> of file <a class="el" href="_hello_world_8php_source.html">HelloWorld.php</a>.</p>
 
 </div>
 </div>
@@ -220,8 +231,11 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The magic invoke is triggered if the instance of the class is called as function</p>
+<p>will call the controller to start the MVC chain and get the result back, the result con be both HTML or an Object</p>
+<dl class="section return"><dt>Returns</dt><dd>object/string </dd></dl>
 
-<p>Definition at line <a class="el" href="_hello_world_8php_source.html#l00009">9</a> of file <a class="el" href="_hello_world_8php_source.html">HelloWorld.php</a>.</p>
+<p>Definition at line <a class="el" href="_hello_world_8php_source.html#l00032">32</a> of file <a class="el" href="_hello_world_8php_source.html">HelloWorld.php</a>.</p>
 
 </div>
 </div>
@@ -264,8 +278,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Controller function, will call the model to get data, call the view passing the data from the model and return the result in the key "prevent_view" is present in the config array, it will return the data from the model </p><dl class="section return"><dt>Returns</dt><dd>type </dd></dl>
 
-<p>Definition at line <a class="el" href="_hello_world_8php_source.html#l00013">13</a> of file <a class="el" href="_hello_world_8php_source.html">HelloWorld.php</a>.</p>
+<p>Definition at line <a class="el" href="_hello_world_8php_source.html#l00041">41</a> of file <a class="el" href="_hello_world_8php_source.html">HelloWorld.php</a>.</p>
 
 </div>
 </div>
@@ -316,8 +331,10 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Model function</p>
+<p>this function will do the heavy lifting ie get stuff from the DB, parse documents, calculate the mass of the sun etc in this case will return an "Hello, World!" </p><dl class="section return"><dt>Returns</dt><dd>object|array|string </dd></dl>
 
-<p>Definition at line <a class="el" href="_hello_world_8php_source.html#l00023">23</a> of file <a class="el" href="_hello_world_8php_source.html">HelloWorld.php</a>.</p>
+<p>Definition at line <a class="el" href="_hello_world_8php_source.html#l00058">58</a> of file <a class="el" href="_hello_world_8php_source.html">HelloWorld.php</a>.</p>
 
 </div>
 </div>
@@ -367,8 +384,10 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>the view will open an output buffer, process the data from the model write the processed output in the output buffer and return it</p>
+<dl class="section return"><dt>Returns</dt><dd>string content of the output buffer </dd></dl>
 
-<p>Definition at line <a class="el" href="_hello_world_8php_source.html#l00028">28</a> of file <a class="el" href="_hello_world_8php_source.html">HelloWorld.php</a>.</p>
+<p>Definition at line <a class="el" href="_2_example_2_hello_world_8php_source.html#l00070">70</a> of file <a class="el" href="_2_example_2_hello_world_8php_source.html">HelloWorld.php</a>.</p>
 
 </div>
 </div>
@@ -392,10 +411,10 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>the view will open an output buffer, process the data from the model write the processed output in the output buffer and return it</p>
-<dl class="section return"><dt>Returns</dt><dd>string content of the output buffer </dd></dl>
+<p>View function</p>
+<p>this function will generate and return the html markup, it will open and output buffer, write inside the HTML and return the content of the ob to the controller </p><dl class="section return"><dt>Returns</dt><dd>type </dd></dl>
 
-<p>Definition at line <a class="el" href="_2_example_2_hello_world_8php_source.html#l00070">70</a> of file <a class="el" href="_2_example_2_hello_world_8php_source.html">HelloWorld.php</a>.</p>
+<p>Definition at line <a class="el" href="_hello_world_8php_source.html#l00070">70</a> of file <a class="el" href="_hello_world_8php_source.html">HelloWorld.php</a>.</p>
 
 </div>
 </div>
@@ -405,7 +424,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 22 2014 23:48:49 for MH_Widget by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 25 2014 23:39:33 for MH_Widget by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

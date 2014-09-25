@@ -10,7 +10,7 @@ require_once 'MH_WidgetBase.php';
 
 /**
  * @class MH_Widget
- * Main Widget class, it will load dependecies, create instances and call the oter widget
+ * @brief Main Widget class, it will load dependecies, create instances and call the oter widget
  * 
  * This class cam behave differently based on the way the different method are called:
  * 

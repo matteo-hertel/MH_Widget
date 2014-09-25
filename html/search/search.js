@@ -7,11 +7,11 @@
 
 var indexSectionsWithContent =
 {
-  0: "$_cghilmrv",
+  0: "$_cghilmprv",
   1: "ghm",
   2: "m",
   3: "ghimr",
-  4: "_cilmv",
+  4: "_cgilmpv",
   5: "$",
   6: "r"
 };

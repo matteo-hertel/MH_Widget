@@ -18,7 +18,7 @@ echo "<hr />";
 
 //$error = $widget("test");
 
-require_once './Class/MH_WIdgetParser.php';
+require_once 'Class/MH_WIdgetParser.php';
 $test = <<< EOT
 This is a simple example in wich I can show you that I can my profile pic from my gravatr widget
         <br />
@@ -29,7 +29,7 @@ This is a simple example in wich I can show you that I can my profile pic from m
         
         
 EOT;
-echo MH_WidgetParser::parse($test);
+echo \MH_Widget\MH_WidgetParser::parse($test);
 
 echo sprintf("Execution time: %s", microtime(true) - $start);
 

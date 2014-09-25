@@ -102,11 +102,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="index_8php.html#ac62167326fcdc762297fe76407218b55">   15</a></span>&#160;<a class="code" href="index_8php.html#ac62167326fcdc762297fe76407218b55">$avatar</a> = <a class="code" href="index_8php.html#acb5909402ce42108d73f23810e884f31">$widget</a>(<span class="stringliteral">&quot;Gravatar&quot;</span>, [<span class="stringliteral">&quot;email&quot;</span> =&gt; <span class="stringliteral">&quot;info@matteohertel.com&quot;</span>, <span class="stringliteral">&quot;size&quot;</span> =&gt; <a class="code" href="index_8php.html#af594986e4618a8d6a5d7566617f583c6">$size</a> &gt; 1 &amp;&amp; <a class="code" href="index_8php.html#af594986e4618a8d6a5d7566617f583c6">$size</a> &lt; 2048 ? <a class="code" href="index_8php.html#af594986e4618a8d6a5d7566617f583c6">$size</a> : 80]);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;echo <a class="code" href="index_8php.html#ac62167326fcdc762297fe76407218b55">$avatar</a>;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;echo <span class="stringliteral">&quot;&lt;hr /&gt;&quot;</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="index_8php.html#aeba2ab722cedda53dbb7ec1a59f45550">   18</a></span>&#160;<a class="code" href="index_8php.html#aeba2ab722cedda53dbb7ec1a59f45550">$error</a> = <a class="code" href="index_8php.html#acb5909402ce42108d73f23810e884f31">$widget</a>(<span class="stringliteral">&quot;test&quot;</span>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;echo sprintf(<span class="stringliteral">&quot;Execution time: %s&quot;</span>, microtime(<span class="keyword">true</span>) - <a class="code" href="index_8php.html#a50a00e7de77365e00b117e73aa82fb9b">$start</a>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//$error = $widget(&quot;test&quot;);</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;require_once <span class="stringliteral">&#39;Class/MH_WIdgetParser.php&#39;</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="index_8php.html#a31daebf88fc668f410293e2c70cea3fc">   22</a></span>&#160;<a class="code" href="index_8php.html#a31daebf88fc668f410293e2c70cea3fc">$test</a> = &lt;&lt;&lt; EOT</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;This is a simple example in wich I can show you that I can my profile pic from my gravatr widget</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        &lt;br /&gt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    &lt;widget size=<span class="stringliteral">&quot;128&quot;</span> email=<span class="stringliteral">&quot;info@matteohertel.com&quot;</span>&gt;<a class="code" href="class_gravatar.html">Gravatar</a>&lt;/widget&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        &lt;hr /&gt;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    and I want another image but 80x80 now!</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        &lt;widget size=<span class="stringliteral">&quot;80&quot;</span> email=<span class="stringliteral">&quot;info@matteohertel.com&quot;</span>&gt;<a class="code" href="class_gravatar.html">Gravatar</a>&lt;/widget&gt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;EOT;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;echo \MH_Widget\MH_WidgetParser::parse(<a class="code" href="index_8php.html#a31daebf88fc668f410293e2c70cea3fc">$test</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;echo sprintf(<span class="stringliteral">&quot;Execution time: %s&quot;</span>, microtime(<span class="keyword">true</span>) - <a class="code" href="index_8php.html#a50a00e7de77365e00b117e73aa82fb9b">$start</a>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="ttc" id="index_8php_html_a31daebf88fc668f410293e2c70cea3fc"><div class="ttname"><a href="index_8php.html#a31daebf88fc668f410293e2c70cea3fc">$test</a></div><div class="ttdeci">$test</div><div class="ttdef"><b>Definition:</b> <a href="index_8php_source.html#l00022">index.php:22</a></div></div>
 <div class="ttc" id="index_8php_html_a50a00e7de77365e00b117e73aa82fb9b"><div class="ttname"><a href="index_8php.html#a50a00e7de77365e00b117e73aa82fb9b">$start</a></div><div class="ttdeci">$start</div><div class="ttdef"><b>Definition:</b> <a href="index_8php_source.html#l00003">index.php:3</a></div></div>
-<div class="ttc" id="index_8php_html_aeba2ab722cedda53dbb7ec1a59f45550"><div class="ttname"><a href="index_8php.html#aeba2ab722cedda53dbb7ec1a59f45550">$error</a></div><div class="ttdeci">$error</div><div class="ttdef"><b>Definition:</b> <a href="index_8php_source.html#l00018">index.php:18</a></div></div>
+<div class="ttc" id="class_gravatar_html"><div class="ttname"><a href="class_gravatar.html">Gravatar</a></div><div class="ttdoc">Gravatar (Globally Recognized Avatar) widget will provide a widget that will return the markup to ren...</div><div class="ttdef"><b>Definition:</b> <a href="_gravatar_8php_source.html#l00013">Gravatar.php:13</a></div></div>
 <div class="ttc" id="index_8php_html_ac62167326fcdc762297fe76407218b55"><div class="ttname"><a href="index_8php.html#ac62167326fcdc762297fe76407218b55">$avatar</a></div><div class="ttdeci">$avatar</div><div class="ttdef"><b>Definition:</b> <a href="index_8php_source.html#l00015">index.php:15</a></div></div>
 <div class="ttc" id="index_8php_html_af594986e4618a8d6a5d7566617f583c6"><div class="ttname"><a href="index_8php.html#af594986e4618a8d6a5d7566617f583c6">$size</a></div><div class="ttdeci">$size</div><div class="ttdef"><b>Definition:</b> <a href="index_8php_source.html#l00004">index.php:4</a></div></div>
 <div class="ttc" id="index_8php_html_a680ca29c367f955ac2569ca96d621113"><div class="ttname"><a href="index_8php.html#a680ca29c367f955ac2569ca96d621113">$hello</a></div><div class="ttdeci">$hello</div><div class="ttdef"><b>Definition:</b> <a href="index_8php_source.html#l00010">index.php:10</a></div></div>
@@ -114,7 +132,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 22 2014 23:48:49 for MH_Widget by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 25 2014 23:39:33 for MH_Widget by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
