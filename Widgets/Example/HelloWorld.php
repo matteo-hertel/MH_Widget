@@ -1,60 +1,59 @@
 <?php
 
-// Use the right namespace
-use \MH_Widget as Widget;
-
 /**
  * @class HelloWorld
- * @brief Simple class to show how the widget system can work
- *
+ * @brief Simple HelloWorld class to show how the widget system is working
  *
  * @copyright  Copyright (c) 2014 Matteo Hertel (info@matteohertel.com)
  * @license    MIT
  * @version    0.1
  * @author    Matteo Hertel <info@matteohertel.com>
  */
-class HelloWorld extends Widget\MH_WidgetBase {
+class HelloWorld extends \MH_widget\MH_widgetBase {
 
     /**
-     * magic constructor will set the config in the instance
+     * @brief Magic contructor 
      * 
-     * @param array [optional] $config
+     * Gets a config array as parameter and will make that array availabe in the class scope
+     * 
+     * @param type $config
      */
-    public function __construct($config = false) {
+    public function __construct($config) {
         $this->config = $config ? $config : [];
     }
 
     /**
-     * the invoke will call the controller
+     * The magic invoke is triggered if the instance of the class is called as function
      * 
-     * @return function output controller
+     * will call the controller to start the MVC chain and get the result back, the result con be both HTML or an Object
+     * 
+     * @return object/string
      */
     public function __invoke() {
         return $this->controller();
     }
 
     /**
-     * The controller will call the model for the raw data and pass it to the view
-     * if the prevent_view flag is passed will return the raw data
-     * 
-     * @return function output model|view
+     * Controller function, will call the model to get data, call the view passing the data from the model and return the result
+     * in the key "prevent_view" is present in the config array, it will return the data from the model
+     * @return type
      */
     protected function controller() {
-        // get data from the controller
         $this->data = $this->model();
-        // if prevent view is present return the data
         if (array_key_exists("prevent_view", $this->config)):
 
             return $this->data;
 
         endif;
-        // return the markup from the view passing the data to it
         return $this->view($this->data);
     }
 
     /**
-     * in the model data are created in thi example is just a string
+     * Model function
      * 
+     * this function will do the heavy lifting ie get stuff from the DB, parse documents, calculate the mass of the sun etc
+     * in this case will return an "Hello, World!"
+     * @return object|array|string
      */
     protected function model() {
 
@@ -62,17 +61,17 @@ class HelloWorld extends Widget\MH_WidgetBase {
     }
 
     /**
-     * the view will open an output buffer, process the data from the model
-     * write the processed output in the output buffer and return it
+     * View function
      * 
-     * @return string content of the output buffer
+     * this function will generate and return the html markup, it will open and output buffer, 
+     * write inside the HTML and return the content of the ob to the controller
+     * @return type
      */
     protected function view() {
-        // open output buffer
         ob_start();
-        // write content in the ob
+
         echo $this->data;
-        //return the clean ob;
+
         return ob_get_clean();
     }
 

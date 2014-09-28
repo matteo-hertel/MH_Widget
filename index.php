@@ -22,10 +22,10 @@ require_once 'Class/MH_WIdgetParser.php';
 $test = <<< EOT
 This is a simple example in wich I can show you that I can my profile pic from my gravatr widget
         <br />
-    <widget size="128" email="info@matteohertel.com">Gravatar</widget>
+    <mhwidget size="128" email="info@matteohertel.com">Gravatar</mhwidget>
         <hr />
     and I want another image but 80x80 now!
-        <widget size="80" email="info@matteohertel.com">Gravatar</widget>
+        <mhwidget config='a:2:{s:4:"size";s:3:"128";s:5:"email";s:21:"info@matteohertel.com";}'>Gravatar</mhwidget>
         
         
 EOT;

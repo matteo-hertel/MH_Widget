@@ -22,7 +22,7 @@ class MH_WidgetParser {
      */
     private $dom,
             /**
-             * all the <widgets> tags found in the text
+             * all the <mhwidgets> tags found in the text
              */
             $widgets;
 
@@ -38,7 +38,7 @@ class MH_WidgetParser {
      * 1. Create a new instnace of the DOMDocument
      * 2. suppress the error that will buble up if the HTML is invalid, we love invalid HTML
      * 3. load the text as HTML
-     * 4. replace all the <widget> tag with the desired content using the function getWidget
+     * 4. replace all the <mhwidget> tag with the desired content using the function getWidget
      * 5. assign the new HTML to the html property
      * @param string $text
      */
@@ -69,7 +69,7 @@ class MH_WidgetParser {
      */
     private function getWidget() {
         //get all the widget tags
-        $nodes = $this->dom->getElementsByTagname("widget");
+        $nodes = $this->dom->getElementsByTagname("mhwidget");
         // extract the length
         $len = $nodes->length;
         if ($len):
