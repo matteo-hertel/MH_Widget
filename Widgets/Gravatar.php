@@ -59,7 +59,7 @@ class Gravatar extends \MH_widget\MH_widgetBase {
      */
     protected function model() {
         //base gravatar URL
-        $base = "http://www.gravatar.com/avatar/" . md5(strtolower(trim($this->config['email'])));
+        $base = "http://www.gravatar.com/avatar/" . md5(strtolower(trim(array_key_exists("email", $this->config) ? $this->config['email'] : "")));
         //empty size, if there is not size in the config it will be an empty string an will not break the scritp if called
         $size = "";
         if (isset($this->config["size"])):
