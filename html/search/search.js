@@ -12,8 +12,7 @@ var indexSectionsWithContent =
   2: "m",
   3: "ghimr",
   4: "_cgilmpv",
-  5: "$",
-  6: "r"
+  5: "$"
 };
 
 var indexSectionNames =
@@ -23,8 +22,7 @@ var indexSectionNames =
   2: "namespaces",
   3: "files",
   4: "functions",
-  5: "variables",
-  6: "pages"
+  5: "variables"
 };
 
 function convertToId(search)

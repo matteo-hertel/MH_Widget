@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>MH_Widget: README</title>
+<title>MH_Widget: MH_Widgets</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -76,13 +76,61 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">README </div>  </div>
+<div class="title">MH_Widgets </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="textblock"><p>This sets of classes will provide a quick way to create widgets in PHP and integrate thow widget in your HTML.</p>
+<p>The workflow of a proper widget is:</p>
+<ol type="1">
+<li>Create an instance of <a class="el" href="class_m_h___widget.html" title="Main Widget class, it will load dependecies, create instances and call the oter widget. ">MH_Widget</a></li>
+<li>Call the instance as a function (to trigger the magic <code>__invkoke</code>) passing three arguments (two optional): path, config array, className</li>
+<li>under the hood the class will:<ul>
+<li>check if the class is already loaded using the className parameter or the last bit of the path</li>
+<li>if there is no instance include the php file in the provided path but inside the Widgets folder</li>
+<li>create a new instance of the requested widget and pass the config object</li>
+<li>call the instance as function (to trigger the magic <code>__invkoke</code>) and return the result</li>
+</ul>
+</li>
+</ol>
+<p>The single widget workflow is:</p>
+<ol type="1">
+<li>from the magic invoke the the <code>controller</code> method is called</li>
+<li>the <code>controller</code> method call the <code>model</code> method to get data</li>
+<li>the <code>controlle</code>r will call and return the view method passing the data from the model<ul>
+<li>if the <code>prevent_view</code> kay is found in the config array the controller will return the data from the model without call the view</li>
+</ul>
+</li>
+</ol>
+<h2>Edge Cases </h2>
+<p>To be a proper widget the class must exted the MH_WIdgetBase class and override the <code>__invoke</code>, <code>controller</code>, <code>model</code> and <code>view</code> methods, if a non poper widget is passed to the <a class="el" href="class_m_h___widget.html" title="Main Widget class, it will load dependecies, create instances and call the oter widget. ">MH_Widget</a> the function will return an instance of the called class without trigger the whole process</p>
+<p>There are two main way to use this set of classes:</p><ol type="1">
+<li>Use <a class="el" href="class_m_h___widget.html" title="Main Widget class, it will load dependecies, create instances and call the oter widget. ">MH_Widget</a> class out of the box</li>
+<li>User the integrated parser to use just simple HTML markup and have the rendered result</li>
+</ol>
+<h2>Out of the box </h2>
+<p>Simple follow the previus workflow or use this snippet:</p>
+<p>```php require_once "Class/MH_Widget.php";</p>
+<p>$widget = new ();</p>
+<p>echo $widget("Gravatar", ["email" =&gt; "youremail@gravatr.com", "size" =&gt; 80]);</p>
+<p>```</p>
+<h2>Parser </h2>
+<p>With the integrated parser you cna use a custom html tag MHwidget with attributes to render content from the widget, and example of a working tag: ```html &lt;MHwidget size="128" email="youremail@gravatr.com"&gt;<a class="el" href="class_gravatar.html" title="Gravatar (Globally Recognized Avatar) widget will provide a widget that will return the markup to ren...">Gravatar</a>&lt;/widget&gt; ```</p>
+<p>the very same result can be use the config attribute, the content will be trated as serialized array sp ypu can use ```html &lt;mhwidget config="a:2:{s:4:"size";s:3:"128";s:5:"email";s:21:"youremail@gravatr.com";}"&gt;<a class="el" href="class_gravatar.html" title="Gravatar (Globally Recognized Avatar) widget will provide a widget that will return the markup to ren...">Gravatar</a>&lt;/mhwidget&gt; ```</p>
+<p>The parser class is documented alongside with all the other classes.</p>
+<h2>Version </h2>
+<p>0.1</p>
+<h2>Feedback </h2>
+<p>Please, send me your feedback, using the issue tracker on github or via email to info[at]matteohertel.com</p>
+<h2>Installation </h2>
+<p>A composer package will be provided in the next version</p>
+<h2>Dependencies </h2>
+<p>There are no external dependencies but the Parser require the native DOMDocument class and a the widget tag syntax must be right to work properly</p>
+<h2>License </h2>
+<p>MIT </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 25 2014 23:39:33 for MH_Widget by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 28 2014 20:49:49 for MH_Widget by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>MH_Widget: Widget/Gravatar.php Source File</title>
+<title>MH_Widget: Widgets/Gravatar.php Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,7 +37,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Data&#160;Structures</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -70,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c364c3d1f36fa9b90b0e0cb327a29966.html">Widget</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9cc7dab42d10c04902c95d2c14820089.html">Widgets</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -93,8 +92,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_gravatar.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_gravatar.html">Gravatar</a> <span class="keyword">extends</span> \MH_widget\MH_widgetBase {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_gravatar.html#acf2ad978657d47ceab41038dc7d95737">   22</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_gravatar.html#acf2ad978657d47ceab41038dc7d95737">__construct</a>(<a class="code" href="class_m_h___widget_1_1_m_h___widget_base.html#a49c7011be9c979d9174c52a8b83e5d8e">$config</a>) {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        $this-&gt;config = <a class="code" href="class_m_h___widget_1_1_m_h___widget_base.html#a49c7011be9c979d9174c52a8b83e5d8e">$config</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_gravatar.html#acf2ad978657d47ceab41038dc7d95737">   22</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_gravatar.html#acf2ad978657d47ceab41038dc7d95737">__construct</a>($config) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        $this-&gt;config = is_array($config) ? $config : array();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_gravatar.html#a9aac7e1475efe923de4e19cc2511f092">   33</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">function</span> <a class="code" href="class_gravatar.html#a9aac7e1475efe923de4e19cc2511f092">__invoke</a>() {</div>
@@ -106,7 +105,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">//check for the previen_view key, and return the data if is present or call the view</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">if</span> (array_key_exists(<span class="stringliteral">&quot;prevent_view&quot;</span>, $this-&gt;config)):</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_m_h___widget_1_1_m_h___widget_base.html#a6efc15b5a2314dd4b5aaa556a375c6d6">$this-&gt;data</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">return</span> $this-&gt;data;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        endif;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> $this-&gt;<a class="code" href="class_gravatar.html#a33a6fe9ba5c60d6abbf88d65d55895a9">view</a>($this-&gt;data);</div>
@@ -146,18 +145,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
 <div class="ttc" id="class_gravatar_html_aa10e8f0720b7ab5ac4aa8351b36af76a"><div class="ttname"><a href="class_gravatar.html#aa10e8f0720b7ab5ac4aa8351b36af76a">Gravatar\controller</a></div><div class="ttdeci">controller()</div><div class="ttdef"><b>Definition:</b> <a href="_gravatar_8php_source.html#l00042">Gravatar.php:42</a></div></div>
-<div class="ttc" id="class_m_h___widget_1_1_m_h___widget_base_html_a49c7011be9c979d9174c52a8b83e5d8e"><div class="ttname"><a href="class_m_h___widget_1_1_m_h___widget_base.html#a49c7011be9c979d9174c52a8b83e5d8e">MH_Widget\MH_WidgetBase\$config</a></div><div class="ttdeci">$config</div><div class="ttdef"><b>Definition:</b> <a href="_m_h___widget_base_8php_source.html#l00027">MH_WidgetBase.php:27</a></div></div>
 <div class="ttc" id="class_gravatar_html_af758be52317607e28c2b633561d322f6"><div class="ttname"><a href="class_gravatar.html#af758be52317607e28c2b633561d322f6">Gravatar\model</a></div><div class="ttdeci">model()</div><div class="ttdef"><b>Definition:</b> <a href="_gravatar_8php_source.html#l00060">Gravatar.php:60</a></div></div>
 <div class="ttc" id="class_gravatar_html_acf2ad978657d47ceab41038dc7d95737"><div class="ttname"><a href="class_gravatar.html#acf2ad978657d47ceab41038dc7d95737">Gravatar\__construct</a></div><div class="ttdeci">__construct($config)</div><div class="ttdoc">Magic contructor. </div><div class="ttdef"><b>Definition:</b> <a href="_gravatar_8php_source.html#l00022">Gravatar.php:22</a></div></div>
 <div class="ttc" id="class_gravatar_html"><div class="ttname"><a href="class_gravatar.html">Gravatar</a></div><div class="ttdoc">Gravatar (Globally Recognized Avatar) widget will provide a widget that will return the markup to ren...</div><div class="ttdef"><b>Definition:</b> <a href="_gravatar_8php_source.html#l00013">Gravatar.php:13</a></div></div>
 <div class="ttc" id="class_gravatar_html_a9aac7e1475efe923de4e19cc2511f092"><div class="ttname"><a href="class_gravatar.html#a9aac7e1475efe923de4e19cc2511f092">Gravatar\__invoke</a></div><div class="ttdeci">__invoke()</div><div class="ttdef"><b>Definition:</b> <a href="_gravatar_8php_source.html#l00033">Gravatar.php:33</a></div></div>
-<div class="ttc" id="class_m_h___widget_1_1_m_h___widget_base_html_a6efc15b5a2314dd4b5aaa556a375c6d6"><div class="ttname"><a href="class_m_h___widget_1_1_m_h___widget_base.html#a6efc15b5a2314dd4b5aaa556a375c6d6">MH_Widget\MH_WidgetBase\$data</a></div><div class="ttdeci">$data</div><div class="ttdef"><b>Definition:</b> <a href="_m_h___widget_base_8php_source.html#l00033">MH_WidgetBase.php:33</a></div></div>
 <div class="ttc" id="index_8php_html_af594986e4618a8d6a5d7566617f583c6"><div class="ttname"><a href="index_8php.html#af594986e4618a8d6a5d7566617f583c6">$size</a></div><div class="ttdeci">$size</div><div class="ttdef"><b>Definition:</b> <a href="index_8php_source.html#l00004">index.php:4</a></div></div>
 <div class="ttc" id="class_gravatar_html_a33a6fe9ba5c60d6abbf88d65d55895a9"><div class="ttname"><a href="class_gravatar.html#a33a6fe9ba5c60d6abbf88d65d55895a9">Gravatar\view</a></div><div class="ttdeci">view()</div><div class="ttdef"><b>Definition:</b> <a href="_gravatar_8php_source.html#l00091">Gravatar.php:91</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 25 2014 23:39:33 for MH_Widget by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 28 2014 22:14:08 for MH_Widget by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
