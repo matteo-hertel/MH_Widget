@@ -10,7 +10,7 @@
  * @version    0.1
  * @author    Matteo Hertel <info@matteohertel.com>
  */
-class Gravatar extends \MH_widget\MH_widgetBase {
+class Gravatar extends \MH_Widget\MH_widgetBase {
 
     /**
      * @brief Magic contructor 
