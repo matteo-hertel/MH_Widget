@@ -6,7 +6,7 @@ $start = microtime(true);
  * 
  * Simple Hello World
  */
-require_once "Class/MH_Widget.php";
+require_once "vendor/autoload.php";
 
 $widget = new \MH_Widget\MH_widget();
 

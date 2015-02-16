@@ -9,7 +9,7 @@
  * @version    0.1
  * @author    Matteo Hertel <info@matteohertel.com>
  */
-class HelloWorld extends \MH_widget\MH_widgetBase {
+class HelloWorld extends \MH_Widget\MH_widgetBase {
 
     /**
      * @brief Magic contructor 
