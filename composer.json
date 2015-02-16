@@ -1,0 +1,16 @@
+{
+    "name": "mh/widget",
+    "description": "Flexible widget system with built in parser",
+    "type": "libray",
+    "license": "MIT",
+    "authors": [{
+        "name": "Matteo Hertel",
+        "email": "info@matteohertel.com"
+    }],
+    "autoload": {
+        "psr-4": {
+            "MH_Widget\\": "Class/"
+        }
+    },
+
+}
