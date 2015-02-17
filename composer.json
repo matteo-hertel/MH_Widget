@@ -1,5 +1,5 @@
 {
-    "name": "mh/widget",
+    "name": "matteohertel/mh-widget",
     "version": "0.1.0",
     "description": "Flexible widget system with built in parser",
     "type": "libray",
