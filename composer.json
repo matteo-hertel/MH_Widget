@@ -8,6 +8,7 @@
         "name": "Matteo Hertel",
         "email": "info@matteohertel.com"
     }],
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "MH_Widget\\": "Class/"
