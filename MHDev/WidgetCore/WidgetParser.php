@@ -1,11 +1,6 @@
 <?php
 
-/**
- * @brief The widget system will run under the MH_Widget namespace
- */
-
-namespace MH_Widget;
-
+namespace MHDev\WidgetCore;
 /**
  * @class MH_WidgetParser
  * @brief This class will parse the give HTML and will replace all the widget tags with the content from MH_Widget class
@@ -15,7 +10,7 @@ namespace MH_Widget;
  * @version    0.1
  * @author    Matteo Hertel <info@matteohertel.com>
  */
-class MH_WidgetParser {
+class WidgetParser {
 
     /**
      * $dom: the instance of the  DOMDocument class

@@ -1,16 +1,17 @@
 <?php
 
+namespace Test;
+
 /**
- * @class Gravatar
- * @brief Gravatar (Globally Recognized Avatar) widget will provide a widget that will return the markup to render a Gravatar image
- * can get a config object and the result html markup will change based on the object
+ * @class HelloWorld
+ * @brief Simple HelloWorld class to show how the widget system is working
  *
  * @copyright  Copyright (c) 2014 Matteo Hertel (info@matteohertel.com)
  * @license    MIT
  * @version    0.1
  * @author    Matteo Hertel <info@matteohertel.com>
  */
-class Gravatar extends \MH_Widget\MH_widgetBase {
+class TestWidget extends \MHDev\WidgetCore\WidgetAbstract {
 
     /**
      * @brief Magic contructor 
@@ -20,7 +21,7 @@ class Gravatar extends \MH_Widget\MH_widgetBase {
      * @param type $config
      */
     public function __construct($config) {
-        $this->config = is_array($config) ? $config : array();
+        $this->config = $config ? $config : [];
     }
 
     /**
@@ -41,7 +42,6 @@ class Gravatar extends \MH_Widget\MH_widgetBase {
      */
     protected function controller() {
         $this->data = $this->model();
-        //check for the previen_view key, and return the data if is present or call the view
         if (array_key_exists("prevent_view", $this->config)):
 
             return $this->data;
@@ -54,31 +54,12 @@ class Gravatar extends \MH_Widget\MH_widgetBase {
      * Model function
      * 
      * this function will do the heavy lifting ie get stuff from the DB, parse documents, calculate the mass of the sun etc
-     * in this case will get the gravatar based on the config object
+     * in this case will return an "Hello, World!"
      * @return object|array|string
      */
     protected function model() {
-        //base gravatar URL
-        $base = "http://www.gravatar.com/avatar/" . md5(strtolower(trim(array_key_exists("email", $this->config) ? $this->config['email'] : "")));
-        //empty size, if there is not size in the config it will be an empty string an will not break the scritp if called
-        $size = "";
-        if (isset($this->config["size"])):
-            $size = $this->config["size"];
-        endif;
-        //empty $default, if there is not default in the config it will be an empty string an will not break the scritp if called
-        $default = "";
-        if (isset($this->config["default"])):
-            $default = $this->config["default"];
-        endif;
-        //empty $rate, if there is not rate in the config it will be an empty string an will not break the scritp if called
-        $rate = "";
-        if (isset($this->config["rate"])):
-            $rate = $this->config["rate"];
-        endif;
-        //construct the final URL
-        $base .= "?s=$size&d=$default&r=$rate";
 
-        return $base;
+        return "<h1>Test</h1>";
     }
 
     /**
@@ -91,7 +72,7 @@ class Gravatar extends \MH_Widget\MH_widgetBase {
     protected function view() {
         ob_start();
 
-        echo sprintf("<img src='%s' />", $this->data);
+        echo $this->data;
 
         return ob_get_clean();
     }

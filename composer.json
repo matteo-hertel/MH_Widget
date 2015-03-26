@@ -10,9 +10,12 @@
     }],
     "minimum-stability": "dev",
     "autoload": {
+        "classmap": [
+            "Test"
+        ],
         "psr-4": {
-            "MH_Widget\\": "Class/"
+            "MHDev\\": "MHDev/"
         }
-    }
-
+    },
+    "files": ["./TestWidget.php"]
 }

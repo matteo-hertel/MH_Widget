@@ -1,10 +1,6 @@
 <?php
 
-/**
- * @brief The widget system will run under the MH_Widget namespace
- */
-
-namespace MH_Widget;
+namespace MHDev\WidgetCore;
 
 /**
  * @class MH_widgetBase
@@ -18,7 +14,7 @@ namespace MH_Widget;
  * @version    0.1
  * @author    Matteo Hertel <info@matteohertel.com>
  */
-abstract class MH_WidgetBase {
+abstract class WidgetAbstract {
 
     /**
      * Defining $config in this parent class the child class will be able to access
