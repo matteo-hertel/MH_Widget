@@ -29,7 +29,7 @@ class Gravatar extends \MHDev\WidgetCore\WidgetAbstract {
      * 
      * will call the controller to start the MVC chain and get the result back, the result con be both HTML or an Object
      * 
-     * @return object/string
+     * @return mixed
      */
     public function __invoke() {
         return $this->controller();
@@ -48,7 +48,7 @@ class Gravatar extends \MHDev\WidgetCore\WidgetAbstract {
             return $this->data;
 
         endif;
-        return $this->view($this->data);
+        return $this->view();
     }
 
     /**

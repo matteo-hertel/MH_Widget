@@ -34,7 +34,8 @@ class MH_Widget {
      * $config is public in this way the config array can be passed before call the
      * instance as a function
      */
-    public $config, $prefix;
+    public $config;
+    public $prefix;
 
     public function __construct($namespace = "\MHDev\Widgets\\"){
     	$this->prefix = $namespace;
@@ -48,25 +49,11 @@ class MH_Widget {
      * 
      * @param string $path
      * @param array|boolean $config
-     * @param string $className
-     * @return object/boolean
+     * @return mixed
      */
-    public function __invoke($path, $config = false) {
+    public function __invoke($path, $config = [] {
         // if no config array is passed use the config property of the class
         $config = $config ? $config : $this->config;
-        // return an intance of the given widget
-        // $inst = $this->instance($path, $config, $className);
-        // // check if the widget is a valid child of MH_WidgetBase
-        // if (get_parent_class($inst) === "MH_Widget\MH_WidgetBase"):
-        //     // call the instance as a function to trigger the magic invoke
-        //     return $inst();
-
-        // else:
-        //     // if is not a valid child raise a notice and return just the instance of that class
-        //     trigger_error("The target widget must extend MH_Widget\MH_widgetBase, class instance is retuned", E_USER_NOTICE);
-        //     return $inst;
-        // endif;
-
         try{
         	$class = $this->prefix . $path;
         	$obj = new $class($config);
@@ -76,7 +63,7 @@ class MH_Widget {
         }
     }
 
-    public static function create($path, $config = false){
+    public static function create($path, $config = []]){
         $widget = new self();
         return $widget($path, $config);
     }

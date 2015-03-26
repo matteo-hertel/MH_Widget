@@ -15,11 +15,12 @@ class WidgetParser {
     /**
      * $dom: the instance of the  DOMDocument class
      */
-    private $dom,
-            /**
-             * all the <mhwidgets> tags found in the text
-             */
-            $widgets;
+    private $dom;
+    
+    /**
+     * all the <mhwidgets> tags found in the text
+     */
+    private $widgets;
 
     /**
      * The modified HTML redy to go
