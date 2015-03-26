@@ -41,12 +41,6 @@ class TestWidget extends \MHDev\WidgetCore\WidgetAbstract {
      * @return type
      */
     protected function controller() {
-        
-        if (array_key_exists("prevent_view", $this->config)):
-
-            return $this->model();
-
-        endif;
         $this->data = $this->model();
         return $this->view();
     }
