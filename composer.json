@@ -11,7 +11,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "classmap": [
-            "Test"
+            "Example"
         ],
         "psr-4": {
             "MHDev\\": "MHDev/"

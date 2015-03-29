@@ -41,13 +41,13 @@ class Gravatar extends \MHDev\WidgetCore\WidgetAbstract {
      * @return type
      */
     protected function controller() {
-        $this->data = $this->model();
         //check for the previen_view key, and return the data if is present or call the view
         if (array_key_exists("prevent_view", $this->config)):
 
-            return $this->data;
+            return $this->model();
 
         endif;
+        $this->data = $this->model();
         return $this->view();
     }
 

@@ -1,7 +1,7 @@
 <?php
 
 $start = microtime(true);
-require_once "vendor/autoload.php";
+require_once "../vendor/autoload.php";
 
 $widget = new \MHDev\WidgetCore\MH_Widget("\MHDev\Widgets\\");
 
