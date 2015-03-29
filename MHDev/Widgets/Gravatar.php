@@ -42,7 +42,7 @@ class Gravatar extends \MHDev\WidgetCore\WidgetAbstract
      * @return type
      */
     protected function controller() {
-        return $this->view($this->data = $this->model(););
+        return $this->view($this->data = $this->model());
     }
     
     /**
