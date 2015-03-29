@@ -105,10 +105,10 @@ class Gravatar extends \MHDev\WidgetCore\WidgetAbstract
      * this function return true if the connection is made over HTTPS and port 443 (default HTTPS port), false otherwise 
      * @return boolean
      */
-    protected function httpsEnabled($host = $_SERVER) {
-    	if(!array_key_exists("HTTPS", $host) || array_key_exists("SERVER_PORT", $host)):
+    protected function httpsEnabled() {
+    	if(!array_key_exists("HTTPS", $_SERVER) || array_key_exists("SERVER_PORT", $_SERVER)):
     		return false;
     	endif;	
-        return (!empty($host['HTTPS']) && $host['HTTPS'] !== 'off') || $host['SERVER_PORT'] == 443;
+        return (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443;
     }
 }
