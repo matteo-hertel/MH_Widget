@@ -30,7 +30,7 @@ class Gravatar extends \MHDev\WidgetCore\WidgetAbstract
      *
      * will call the controller to start the MVC chain and get the result back, the result con be both HTML or an Object
      *
-     * @return mixed
+     * @return string
      */
     public function __invoke() {
         return $this->controller();
@@ -39,10 +39,11 @@ class Gravatar extends \MHDev\WidgetCore\WidgetAbstract
     /**
      * Controller function, will call the model to get data, call the view passing the data from the model and return the result
      * in the key "prevent_view" is present in the config array, it will return the data from the model
-     * @return type
+     * @return string
      */
     protected function controller() {
-        return $this->view($this->data = $this->model());
+    	$this->data = $this->model();
+        return $this->view();
     }
     
     /**
@@ -50,10 +51,10 @@ class Gravatar extends \MHDev\WidgetCore\WidgetAbstract
      *
      * this function will do the heavy lifting ie get stuff from the DB, parse documents, calculate the mass of the sun etc
      * in this case will get the gravatar based on the config object
-     * @return object|array|string
+     * @return string
      */
     protected function model() {
-        $protocol = $this->httpsEnabled($_SERVER) ? "https://" : "https://";
+        $protocol = $this->httpsEnabled() ? "https://" : "https://";
         $email_hash = md5(strtolower(trim(array_key_exists("email", $this->config) ? $this->config['email'] : "")));
         //base gravatar URL
         $base = sprintf("%swww.gravatar.com/avatar/%s", $protocol, $email_hash);
@@ -87,7 +88,7 @@ class Gravatar extends \MHDev\WidgetCore\WidgetAbstract
      *
      * this function will generate and return the html markup, it will open and output buffer,
      * write inside the HTML and return the content of the ob to the controller
-     * @return type
+     * @return string
      */
     protected function view() {
         ob_start();
@@ -104,7 +105,7 @@ class Gravatar extends \MHDev\WidgetCore\WidgetAbstract
      * this function return true if the connection is made over HTTPS and port 443 (default HTTPS port), false otherwise 
      * @return boolean
      */
-    protected function httpsEnabled($host) {
+    protected function httpsEnabled($host = $_SERVER) {
     	if(!array_key_exists("HTTPS", $host) || array_key_exists("SERVER_PORT", $host)):
     		return false;
     	endif;	
