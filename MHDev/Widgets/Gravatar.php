@@ -53,7 +53,7 @@ class Gravatar extends \MHDev\WidgetCore\WidgetAbstract
      * @return object|array|string
      */
     protected function model() {
-        $protocol = $this->httpsEnabled() ? "https://" : "https://"
+        $protocol = $this->httpsEnabled($_SERVER) ? "https://" : "https://";
         $email_hash = md5(strtolower(trim(array_key_exists("email", $this->config) ? $this->config['email'] : "")));
         //base gravatar URL
         $base = sprintf("%swww.gravatar.com/avatar/%s", $protocol, $email_hash);
@@ -102,9 +102,12 @@ class Gravatar extends \MHDev\WidgetCore\WidgetAbstract
      * httpsEnabled function
      *
      * this function return true if the connection is made over HTTPS and port 443 (default HTTPS port), false otherwise 
-     * @return type
+     * @return boolean
      */
-    protected function httpsEnabled() {
-        return (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443;
+    protected function httpsEnabled($host) {
+    	if(!array_key_exists("HTTPS", $host) || array_key_exists("SERVER_PORT", $host)):
+    		return false;
+    	endif;	
+        return (!empty($host['HTTPS']) && $host['HTTPS'] !== 'off') || $host['SERVER_PORT'] == 443;
     }
 }
