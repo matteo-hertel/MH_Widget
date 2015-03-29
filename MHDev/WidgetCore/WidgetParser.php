@@ -2,7 +2,7 @@
 
 namespace MHDev\WidgetCore;
 /**
- * @class MH_WidgetParser
+ * @class WidgetParser
  * @brief This class will parse the give HTML and will replace all the widget tags with the content from MH_Widget class
  *
  * @copyright  Copyright (c) 2014 Matteo Hertel (info@matteohertel.com)
@@ -34,6 +34,10 @@ class WidgetParser {
      * @param string $text
      */
     public function __construct($text) {
+    	//simple check, will return false if there is no text or text is not a string
+        if (!$text || !is_string($text)):
+            return false;
+        endif;
         // instance of the DOMDocument
         $this->dom = new \DOMDocument();
         //suppress the errors for invalid HTML

@@ -38,7 +38,7 @@ class HelloWorld extends \MHDev\WidgetCore\WidgetAbstract {
     /**
      * Controller function, will call the model to get data, call the view passing the data from the model and return the result
      * in the key "prevent_view" is present in the config array, it will return the data from the model
-     * @return type
+     * @return mixed
      */
     protected function controller() {
         $this->data = $this->model();
@@ -55,7 +55,7 @@ class HelloWorld extends \MHDev\WidgetCore\WidgetAbstract {
      * 
      * this function will do the heavy lifting ie get stuff from the DB, parse documents, calculate the mass of the sun etc
      * in this case will return an "Hello, World!"
-     * @return object|array|string
+     * @return mixed
      */
     protected function model() {
 

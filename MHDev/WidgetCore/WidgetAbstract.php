@@ -3,7 +3,7 @@
 namespace MHDev\WidgetCore;
 
 /**
- * @class MH_widgetBase
+ * @class WidgetAbstract
  * @brief Base widget class, all the widget must extend and override the abstract methods of  this class
  *
  * This class provides the base base structure of the fully function widget, to be a proper widget
