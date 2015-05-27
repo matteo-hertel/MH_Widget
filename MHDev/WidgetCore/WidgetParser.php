@@ -106,8 +106,19 @@ class WidgetParser {
         if (!$text || !is_string($text)):
             return false;
         endif;
+
+        /**
+         * To prevent the DOMDocument to break the html entities (e.g. &nbsp;), this hack is needed
+         * replace all the & with @@ and the from the output replace the @@ back to &
+         *
+         * This is because we might have heterogeneous html and this little trick will fix the issue
+         */
+        $text = str_replace("&", "@@", $text);
         //new instance of this class
         $inst = new self($text);
+
+        //restore & char
+        $inst->html = str_replace("@@", "&", $inst->html);
         //return the parsed HTML
         return $inst->html;
     }

@@ -58,7 +58,7 @@ This is a simple example in wich I can show you that I can get my profile pic fr
         <br />
     <mhwidget size="128" email="info@matteohertel.com">Gravatar</mhwidget>
         <mhwidget size="128" default="mm">Gravatar</mhwidget>
-<br />
+<p>&nbsp;</p>
     and I want another image but 80x80 now!
         <mhwidget config='a:2:{s:4:"size";s:3:"128";s:5:"email";s:21:"info@matteohertel.com";}'>Gravatar</mhwidget>
     and last but not least, <mhwidget>Example\HelloWorld</mhwidget>
