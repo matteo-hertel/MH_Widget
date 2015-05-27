@@ -1,0 +1,6 @@
+digraph "Example" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  dir_12edc0e05f1779c1fa4e8c3da147d75b [shape=box, label="Example", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_12edc0e05f1779c1fa4e8c3da147d75b.html"];
+}

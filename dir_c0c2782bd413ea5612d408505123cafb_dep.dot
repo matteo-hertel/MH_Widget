@@ -1,0 +1,13 @@
+digraph "MHDev/Widgets" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_bdf5070418a9ab2756bc893e4fdf8291 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="MHDev" fontname="Helvetica", fontsize="10", URL="dir_bdf5070418a9ab2756bc893e4fdf8291.html"]
+  subgraph clusterdir_c0c2782bd413ea5612d408505123cafb {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_c0c2782bd413ea5612d408505123cafb.html"];
+    dir_c0c2782bd413ea5612d408505123cafb [shape=plaintext label="Widgets"];
+    dir_60857f12e04f3adfb0bb289186328894 [shape=box label="Example" color="black" fillcolor="white" style="filled" URL="dir_60857f12e04f3adfb0bb289186328894.html"];
+  }
+  }
+}

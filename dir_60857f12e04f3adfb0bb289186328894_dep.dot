@@ -1,0 +1,9 @@
+digraph "MHDev/Widgets/Example" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_c0c2782bd413ea5612d408505123cafb {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Widgets" fontname="Helvetica", fontsize="10", URL="dir_c0c2782bd413ea5612d408505123cafb.html"]
+  dir_60857f12e04f3adfb0bb289186328894 [shape=box, label="Example", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_60857f12e04f3adfb0bb289186328894.html"];
+  }
+}

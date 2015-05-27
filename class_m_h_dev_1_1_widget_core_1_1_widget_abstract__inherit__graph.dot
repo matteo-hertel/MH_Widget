@@ -1,0 +1,12 @@
+digraph "WidgetAbstract"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="WidgetAbstract",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="HelloWorld",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_m_h_dev_1_1_widgets_1_1_example_1_1_hello_world.html",tooltip="Simple HelloWorld class to show how the widget system is working. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Gravatar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_m_h_dev_1_1_widgets_1_1_gravatar.html",tooltip="Gravatar (Globally Recognized Avatar) widget will provide a widget that will return the markup to ren..."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TestWidget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_test_1_1_test_widget.html"];
+}

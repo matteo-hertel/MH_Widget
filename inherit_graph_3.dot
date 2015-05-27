@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="WidgetParser",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_m_h_dev_1_1_widget_core_1_1_widget_parser.html",tooltip="This class will parse the give HTML and will replace all the widget tags with the content from MH_Wid..."];
+}

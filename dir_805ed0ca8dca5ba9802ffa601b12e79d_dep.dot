@@ -1,0 +1,9 @@
+digraph "MHDev/WidgetCore" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_bdf5070418a9ab2756bc893e4fdf8291 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="MHDev" fontname="Helvetica", fontsize="10", URL="dir_bdf5070418a9ab2756bc893e4fdf8291.html"]
+  dir_805ed0ca8dca5ba9802ffa601b12e79d [shape=box, label="WidgetCore", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_805ed0ca8dca5ba9802ffa601b12e79d.html"];
+  }
+}
