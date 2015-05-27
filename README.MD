@@ -1,5 +1,7 @@
 MH_Widget
 =========
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/matteo-hertel/MH_Widget/badges/quality-score.png?b=Development)](https://scrutinizer-ci.com/g/matteo-hertel/MH_Widget/?branch=Development)
+[![Build Status](https://scrutinizer-ci.com/g/matteo-hertel/MH_Widget/badges/build.png?b=Development)](https://scrutinizer-ci.com/g/matteo-hertel/MH_Widget/build-status/Development)
 
 Flexible, highly configurable widget system replace an HTML place holder with any content.
 
@@ -47,6 +49,16 @@ Gravatar
 
     $widget = new \MHDev\WidgetCore\MH_Widget("\MHDev\Widgets\\");
     echo $widget("Gravatar", ["email" => "info@matteohertel.com", "size" => 80]);
+
+##Example
+To see the package in action run the following(php must be available in the console):
+
+    git clone https://github.com/matteo-hertel/MH_Widget.git
+    cd MH_Widget
+    php -S localhost:8080 -t ./Example
+
+the open your browser to [http://localhost:8080](http://localhost:8080)
+
 Version
 ----
 0.2
