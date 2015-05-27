@@ -1,7 +1,9 @@
-MH_Widgets
+MH_Widget
 =========
 
-Ultra flexible, highly configurable widget system to render any HTML from a single tag.
+Flexible, highly configurable widget system replace an HTML place holder with any content.
+
+The main purpose for this package was to be used alongside a text editor like CKEditor to implement a flexible widget system for the end user([http://docs.ckeditor.com/#!/guide/widget_sdk_tutorial_1](http://docs.ckeditor.com/#!/guide/widget_sdk_tutorial_1))
 
 This package will provide a nice and neat interface to create widgets ready to use in any project, there are a lots of feature straight out of the box, but with its flexible nature can fit any need.
 
